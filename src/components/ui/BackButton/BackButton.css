@@ -1,0 +1,27 @@
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+  margin-bottom: 32px;
+}
+
+.back-button:hover {
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.15);
+  background: var(--glass-hover);
+}
+
+.back-button__arrow {
+  font-size: 16px;
+}

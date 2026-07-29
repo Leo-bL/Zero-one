@@ -1,0 +1,86 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card--cyan::before   { background: radial-gradient(ellipse at top left, var(--accent-cyan-dim), transparent 70%); }
+.card--purple::before { background: radial-gradient(ellipse at top left, var(--accent-purple-dim), transparent 70%); }
+.card--green::before  { background: radial-gradient(ellipse at top left, var(--accent-green-dim), transparent 70%); }
+
+.card:hover::before { opacity: 1; }
+
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: var(--shadow-card);
+}
+
+.card--cyan:hover   { box-shadow: var(--shadow-glow-cyan); }
+.card--purple:hover { box-shadow: var(--shadow-glow-purple); }
+
+.card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.card__icon--cyan   { background: var(--accent-cyan-dim);   color: var(--accent-cyan);   border: 1px solid rgba(34,211,238,0.2); }
+.card__icon--purple { background: var(--accent-purple-dim); color: var(--accent-purple); border: 1px solid rgba(168,85,247,0.2); }
+.card__icon--green  { background: var(--accent-green-dim);  color: var(--accent-green);  border: 1px solid rgba(74,222,128,0.2); }
+
+.card__content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.card__title {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.card__subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.card__arrow {
+  color: var(--text-muted);
+  transition: transform 0.2s ease, color 0.2s ease;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.card:hover .card__arrow {
+  transform: translateX(4px);
+  color: var(--text-secondary);
+}

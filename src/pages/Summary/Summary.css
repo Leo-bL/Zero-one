@@ -1,0 +1,40 @@
+.summary__title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.summary__card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+  flex-wrap: wrap;
+}
+
+.summary__icon {
+  flex-shrink: 0;
+  color: var(--accent-purple);
+  display: flex;
+}
+
+.summary__info {
+  flex: 1;
+  min-width: 160px;
+}
+
+.summary__name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.summary__hint {
+  font-size: 13px;
+  color: var(--text-secondary);
+}

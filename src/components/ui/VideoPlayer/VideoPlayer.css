@@ -1,0 +1,27 @@
+.video-player {
+  --plyr-color-main: var(--accent-cyan);
+  --plyr-video-control-color: #fff;
+  --plyr-video-control-color-hover: #000;
+  --plyr-video-background: #000;
+  --plyr-control-radius: 8px;
+  --plyr-menu-radius: 10px;
+  --plyr-font-family: var(--font-body);
+  --plyr-range-thumb-height: 12px;
+  --plyr-control-spacing: 10px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  overflow: hidden;
+}
+
+.video-player .plyr {
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+/* توهج بسيط على أزرار التحكم بالتفاعل، بنفس هوية الموقع */
+.video-player .plyr__control--overlaid {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+}
+
+.video-player .plyr__control.plyr__tab-focus,
+.video-player .plyr__control:hover {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+}
