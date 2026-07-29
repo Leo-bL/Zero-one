@@ -17,7 +17,5 @@ export const WhatsAppIcon = (props) => (
     />
   </svg>
 );
-
-// ⚠️ عدّل هون رقم الواتساب ورابط الفيسبوك تبعك (نفس القيم مستخدمة بالفوتر وبأعلى صفحة الهبوط)
-export const WHATSAPP_NUMBER = '962700000000'; // بصيغة دولية بدون + أو أصفار زيادة
-export const FACEBOOK_URL = 'https://facebook.com/yourpage';
+export const WHATSAPP_NUMBER = '963984039525';
+export const FACEBOOK_URL = 'https://facebook.com/mohammad.alblati';
